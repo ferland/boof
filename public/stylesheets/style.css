@@ -1,0 +1,139 @@
+@font-face {
+    font-family: neutra;
+    src: url(dist/fonts/neutra.otf);
+}
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif, neutra;
+  background: url('../images/background.jpg') no-repeat;
+  position: absolute;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.container{
+  height: 75%;
+}
+*,h1,h2,h3,h4{
+  font-family: neutra;
+}
+h1.big{
+  font-size: 74px;
+  margin: 6% auto;
+  text-align: center;
+}
+a {
+  color: #00B7FF;
+}
+.middle-text p{
+  text-align: center;
+
+}
+.logo img{
+  display: block;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer{
+  background-color: #033669;
+  height: 30%;
+}
+li.icon{
+  float: left;
+  list-style-type: none;
+  position: relative;
+}
+li.icon:before{
+  background: url(../images/social-sprite.png) no-repeat;
+  width: 40px;
+  height: 35px;
+  content: '';
+  display: inline-block;
+}
+li.icon.big:before{
+  width: 48px;
+  height: 40px
+}
+a.link {
+  vertical-align: middle;
+  margin-top: -22px;
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 7px;
+  color: #fff;
+}
+a.link:hover{
+  color: #00B7FF;
+  text-decoration: none;
+}
+li.icon.gplus:before{
+  background-position: -75px 0px;
+}
+li.icon.fb:before{
+  background-position: -39px 0px; 
+}
+li.icon.youtube:before{
+  background-position: -111px 0px; 
+}
+li.icon.instagram:before{
+  background-position: -148px 0px; 
+}
+li.icon.twitter:before{
+  background-position: -3px 0px; 
+}
+li.icon.big.cerdas:before{
+  background-position: -50px -37px; 
+}
+li.icon.big.plus:before{
+  background-position: -7px -35px; 
+}
+li.icon.big.maju:before{
+  background-position: -51px -35px; 
+}
+li.icon.big.sejahtera:before{
+  background-position: -93px -37px; 
+}
+.footer ul{
+  clear: both;
+  width: 20%;
+  margin: 0 auto;
+}
+.footer ul.slogan li{
+  margin-top: 10%;
+}
+.footer ul.social{
+  float: right;
+}
+.footer.col-md-12{
+  float:right;
+  position:relative;
+  left:-50%;
+  text-align:left;
+}
+li.icon.big:before {
+  width: 42px;
+  height: 40px;
+}
+form.register{
+  text-align: center;
+}
+form.register input[type="text"]{
+  height: 45px;
+  width: 315px;
+  border-radius: 20px;
+  padding: 12px;
+  border: 2px #bdbdbd solid;
+}
+form.register input[type="submit"]{
+  height: 40px;
+  width: 70px;
+  border-radius: 15px;
+  background-color: #f9d62f;
+  border: 1px solid #bdbdbd;
+  margin-left: 15px;
+  text-transform: uppercase;
+  padding: 10px;
+  font-weight: bolder;
+  color: #fff;
+  font-size: 15px;
+}

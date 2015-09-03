@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  div.logo
+    img(src="images/logo.png", alt="")
+  div.middle
+    div.middle-text
+      h1.big ComingSoon
+      p to help you fulfiling Indonesian children’s potential.
+      form.register(name="input", action="#", method="post")
+        input(type="text", name="user" placeholder="Please Enter Your Email")
+        input(type="submit", value="Bagi")
+
+block footer
+  div.row.footer
+    div.row 
+      div.col-md-12
+        ul.slogan
+          li.icon.big.plus
+            a.link Sehat
+          li.icon.big.cerdas
+            a.link Cerdas
+        ul.slogan
+          li.icon.big.maju
+            a.link Maju
+          li.icon.big.sejahtera
+            a.link Sejahtera
+    div.row 
+        div.col-md-12
+          ul.social
+            li.icon.twitter
+            li.icon.fb
+            li.icon.gplus
+            li.icon.youtube
+            li.icon.instagram
