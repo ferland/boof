@@ -1,9 +1,20 @@
-var express = require('express');
-var router = express.Router();
+/*
+ * GET home page.
+ */
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
-module.exports = router;
+exports.index = function(req, res, session){
+  mc.helper.ping(function(data) {
+    res.render('index', { title: 'ayobagi.org' });
+    console.log(req.session)
+  }, function(err) {
+    console.log(err);
+    if (err.name == 'Invalid_ApiKey') {
+      res.locals.error_flash = "Invalid API key. Set it in app.js";
+    } else if (error.error) {
+      res.locals.error_flash = error.code + ": " + error.error;
+    } else {
+      res.locals.error_flash = "An unknown error occurred";
+    }
+    res.render('index', { title: 'ayobagi.org' });
+  });
+};

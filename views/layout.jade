@@ -4,9 +4,14 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/dist/css/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="icon", type="image/png", href="images/favicon.png")
   body
     div.container
       div.row
-       div.col-md-12
+       div.col-md-12.content
+        if messages
+          p(class="text-success")= messages
+        if success
+          p(class="text-error")= success
         block content
     block footer

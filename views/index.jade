@@ -1,19 +1,19 @@
 extends layout
 
 block content
+  div.child
   div.logo
     img(src="images/logo.png", alt="")
   div.middle
     div.middle-text
       h1.big ComingSoon
       p to help you fulfiling Indonesian children’s potential.
-      form.register(name="input", action="#", method="post")
-        input(type="text", name="user" placeholder="Please Enter Your Email")
+      form.register(action='/' method='post' class='form-inline')
+        input(type="email", name="email" placeholder="Please Enter Your Email")
         input(type="submit", value="Bagi")
 
 block footer
   div.row.footer
-    div.row 
       div.col-md-12
         ul.slogan
           li.icon.big.plus
@@ -25,7 +25,6 @@ block footer
             a.link Maju
           li.icon.big.sejahtera
             a.link Sejahtera
-    div.row 
         div.col-md-12
           ul.social
             li.icon.twitter
