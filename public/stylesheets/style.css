@@ -27,8 +27,8 @@ body {
   display: block;
   width: 350px;
   z-index: -99;
-  left: 35%;
-  top: 25%;
+  left: 65%;
+  top: 10%;
 }
 p.middle-p {
   text-align: center;
@@ -225,6 +225,9 @@ form.register input[type="submit"]{
   and (max-device-width: 1024px) 
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 1) {
+    .child{
+    display: none;
+  }
     ul.slogan{
       width: 40%;
     }
@@ -263,6 +266,9 @@ form.register input[type="submit"]{
 and (min-device-width : 320px) 
 and (max-device-width : 480px) 
 and (orientation : landscape){ 
+  .child{
+    display: none;
+  }
   .logo img{
     margin-top: 10px;
     width: 60%;
@@ -286,6 +292,9 @@ and (min-device-width : 320px)
 and (max-device-width : 480px) 
 and (orientation : portrait){ 
 /* STYLES GO HERE */
+  .child{
+    display: none;
+  }
   .logo img{
     width: 100%;
   }
@@ -316,7 +325,10 @@ and (orientation : portrait){
 and (min-device-width : 600px) 
 and (max-device-width : 960px) 
 and (orientation : portrait){ 
-/* STYLES GO HERE */
+  /* STYLES GO HERE */
+  .child{
+    display: none;
+  }
   .logo img{
     width: 70%;
   }
@@ -347,6 +359,9 @@ and (orientation : portrait){
 and (min-device-width : 320px) 
 and (max-device-width : 568px) 
 and (orientation : landscape){ 
+  .child{
+    display: none;
+  }
   .logo img{
     margin-top: 10px;
     width: 60%;
@@ -369,6 +384,9 @@ and (orientation : landscape){
 and (min-device-width : 375px) 
 and (max-device-width : 667px) 
 and (orientation : landscape){ 
+  .child{
+    display: none;
+  }
   .logo img{
     margin-top: 10px;
     width: 60%;
@@ -389,6 +407,9 @@ and (orientation : landscape){
 and (min-device-width : 414px) 
 and (max-device-width : 736px) 
 and (orientation : landscape){ 
+  .child{
+    display: none;
+  }
   .logo img{
     margin-top: 10px;
     width: 60%;
@@ -408,6 +429,9 @@ and (orientation : landscape){
 and (min-device-width : 600px) 
 and (max-device-width : 960px) 
 and (orientation : landscape){ 
+  .child{
+    display: none;
+  }
   .logo img{
     margin-top: 10px;
     width: 60%;
