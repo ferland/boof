@@ -5,40 +5,41 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif, neutra;
   background: url('../images/background.jpg') no-repeat;
-  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
-  width: 100%;
-  height: 100%;
+  background-color: #464646;
 }
-.container{
-  height: 100%;
-  max-height: 70%;
+.row{
+  margin-left: 0;
+  margin-right: 0;
 }
+.container-fluid{
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .child{
   background: url('../images/child.png') no-repeat;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  height: 473px;
   display: block;
-  max-width: 350px;
-  float: right;
-  margin-top: 16%;
+  width: 350px;
   z-index: -99;
-  left: 845px;
+  left: 35%;
+  top: 25%;
 }
-.row{
-  height: 100%;
+p.middle-p {
+  text-align: center;
 }
-.col-md-12.content{
-  height: 100%;
+h1.big{
+  text-align: center;
+  font-size: 50px;
+  margin: 5% 0;
 }
 *,h1,h2,h3,h4{
   font-family: neutra;
-}
-h1.big{
-  font-size: 74px;
-  margin: 6% auto;
-  text-align: center;
 }
 a {
   color: #00B7FF;
@@ -57,6 +58,11 @@ a {
   background-color: #033669;
   height: 100%;
   max-height: 240px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding-top: 40px;
+  left: 0;
 }
 li.icon{
   float: left;
@@ -113,17 +119,13 @@ li.icon.big.maju:before{
 li.icon.big.sejahtera:before{
   background-position: -93px -37px; 
 }
-.footer ul{
-  clear: both;
-  width: 20%;
-  margin: 0 auto;
-}
 .footer ul.slogan li{
-  margin-top: 10%;
   margin-right: 50px;
+  margin-bottom: 35px;
 }
 .footer ul.social{
   float: right;
+  margin-bottom: 0;
 }
 .footer.col-md-12{
   float:right;
@@ -132,8 +134,9 @@ li.icon.big.sejahtera:before{
   text-align:left;
 }
 ul.slogan {
-    width: 27%;
-    display: block;
+  display: block;
+  width: 30%;
+  margin: auto;
 }
 li.icon.big:before {
   width: 42px;
@@ -162,4 +165,261 @@ form.register input[type="submit"]{
   font-weight: bolder;
   color: #fff;
   font-size: 15px;
+}
+
+
+/* ----------- iPad mini ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* ----------- iPad 1 and 2 ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .child{
+      left: 68%;
+    }
+    ul.slogan{
+      width: 55%;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    ul.slogan{
+      width: 40%;
+    }
+}
+
+/* ----------- iPad 3 and 4 ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+
+/* IPHONE  4*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) 
+and (orientation : landscape){ 
+  .logo img{
+    margin-top: 10px;
+    width: 60%;
+  }
+  h1.big{
+    font-size: 36px;
+    margin: 1% 0;
+  }
+  .footer{
+    height: 100px;
+  }
+  ul.slogan{
+    display: none;
+  }
+}
+
+
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) 
+and (orientation : portrait){ 
+/* STYLES GO HERE */
+  .logo img{
+    width: 100%;
+  }
+  h1.big{
+    font-size: 36px;
+  }
+  .footer{
+    height: 100px;
+    padding-top: 10px;
+  }
+  form.register input[type="text"], form.register input[type="email"]{
+    width: 100%;
+  }
+  form.register input[type="submit"]{
+    margin-top: 10px;
+    margin-left: 0;
+  }
+  ul.slogan{
+    display: none;
+  }
+  .footer ul.social{
+    margin-top: 30px;
+  }
+}
+
+
+@media only screen 
+and (min-device-width : 600px) 
+and (max-device-width : 960px) 
+and (orientation : portrait){ 
+/* STYLES GO HERE */
+  .logo img{
+    width: 70%;
+  }
+  h1.big{
+    font-size: 36px;
+  }
+  .footer{
+    height: 100px;
+    padding-top: 10px;
+  }
+  form.register input[type="text"], form.register input[type="email"]{
+    width: 100%;
+  }
+  form.register input[type="submit"]{
+    margin-top: 10px;
+    margin-left: 0;
+  }
+  ul.slogan{
+    display: none;
+  }
+  .footer ul.social{
+    margin-top: 30px;
+  }
+}
+
+/*iphone 5*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape){ 
+  .logo img{
+    margin-top: 10px;
+    width: 60%;
+  }
+  h1.big{
+    font-size: 36px;
+    margin: 1% 0;
+  }
+  .footer{
+    height: 100px;
+  }
+  ul.slogan{
+    display: none;
+  }
+}
+
+
+/* iphone 6 */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape){ 
+  .logo img{
+    margin-top: 10px;
+    width: 60%;
+  }
+  h1.big{
+    font-size: 36px;
+    margin: 1% 0;
+  }
+  .footer{
+    height: 100px;
+  }
+  ul.slogan{
+    display: none;
+  }
+}
+/* iphone 6 */
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : landscape){ 
+  .logo img{
+    margin-top: 10px;
+    width: 60%;
+  }
+  h1.big{
+    font-size: 36px;
+    margin: 1% 0;
+  }
+  .footer{
+    height: 100px;
+  }
+  ul.slogan{
+    display: none;
+  }
+}
+@media only screen 
+and (min-device-width : 600px) 
+and (max-device-width : 960px) 
+and (orientation : landscape){ 
+  .logo img{
+    margin-top: 10px;
+    width: 60%;
+  }
+  h1.big{
+    font-size: 36px;
+    margin: 1% 0;
+  }
+  .footer{
+    height: 100px;
+  }
+  ul.slogan{
+    display: none;
+  }
 }

@@ -1,31 +1,46 @@
 extends layout
 
 block content
-  div.child
-  div.logo
-    img(src="images/logo.png", alt="")
-  div.middle
-    div.middle-text
+  //- div.child.col-md-offset-4
+  div.row
+    div.col-sm-12
+    div.logo
+      img(src="images/logo.png", alt="")
+  div.row
+    div.col-sm-12
       h1.big ComingSoon
-      p to help you fulfiling Indonesian children’s potential.
+  div.row
+    div.col-sm-12
+      p.middle-p to help you fulfiling Indonesian children’s potential.
       form.register(action='/' method='post' class='form-inline')
-        input(type="email", name="email" placeholder="Please Enter Your Email")
-        input(type="submit", value="Bagi")
+        div.form-group
+          input(type="email", name="email" placeholder="Please Enter Your Email")
+          input(type="submit", value="Bagi")
+  //- div.middle
+  //-   div.middle-text
+  //-     p to help you fulfiling Indonesian children’s potential.
+  //-     form.register(action='/' method='post' class='form-inline')
+  //-       input(type="email", name="email" placeholder="Please Enter Your Email")
+  //-       input(type="submit", value="Bagi")
 
 block footer
   div.row.footer
+      div.col-sm-12
+        div.row
+          div.col-sm-12
+            ul.slogan
+              li.icon.big.plus
+                a.link Sehat
+              li.icon.big.cerdas
+                a.link Cerdas
+        div.row
+          div.col-sm-12
+            ul.slogan
+              li.icon.big.maju
+                a.link Maju
+              li.icon.big.sejahtera
+                a.link Sejahtera
       div.col-md-12
-        ul.slogan
-          li.icon.big.plus
-            a.link Sehat
-          li.icon.big.cerdas
-            a.link Cerdas
-        ul.slogan
-          li.icon.big.maju
-            a.link Maju
-          li.icon.big.sejahtera
-            a.link Sejahtera
-        div.col-md-12
           ul.social
             li.icon.twitter
             li.icon.fb
