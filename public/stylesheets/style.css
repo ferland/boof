@@ -64,19 +64,19 @@ a {
   padding-top: 40px;
   left: 0;
 }
-li.icon{
+li{
   float: left;
   list-style-type: none;
   position: relative;
 }
-li.icon:before{
+li.icon:before,a.icon:before{
   background: url(../images/social-sprite.png) no-repeat;
   width: 40px;
   height: 35px;
   content: '';
   display: inline-block;
 }
-li.icon.big:before{
+a.icon.big:before{
   width: 48px;
   height: 40px
 }
@@ -92,19 +92,19 @@ a.link:hover{
   color: #00B7FF;
   text-decoration: none;
 }
-li.icon.gplus:before{
+a.icon.gplus:before{
   background-position: -75px 0px;
 }
-li.icon.fb:before{
+a.icon.fb:before{
   background-position: -39px 0px; 
 }
-li.icon.youtube:before{
+a.icon.youtube:before{
   background-position: -111px 0px; 
 }
-li.icon.instagram:before{
+a.icon.instagram:before{
   background-position: -148px 0px; 
 }
-li.icon.twitter:before{
+a.icon.twitter:before{
   background-position: -3px 0px; 
 }
 li.icon.big.cerdas:before{
