@@ -140,9 +140,10 @@ block content
             p.alert-success
             p.alert-warning
             .subscribe-hide
-              input#subscribe-email.form-control(type="email", name="subscribe-email", placeholder="Masukkan alamat email", required="")
-              button#subscribe-submit.btn(type="submit")
-                i.fa.fa-envelope
+              form.register(action='/' method='post' class='form-inline')
+                input#subscribe-email.form-control(type="email", name="email", placeholder="Masukkan alamat email", required="")
+                button#subscribe-submit.btn(type="submit")
+                  i.fa.fa-envelope
               span#subscribe-loading.btn
                 i.fa.fa-refresh.fa-spin
               .subscribe-error
@@ -171,7 +172,7 @@ block content
           p.section-description
             | Kami siap membantu Anda untuk komentar dan pertanyaan tentang kami.
           // /.section-description
-          form#contact-form.clearfix(action="email.php", method="post")
+          form#contact-form.clearfix(action="/sendmail", method="post")
             .contact-box-hide
               .col-sm-6
                 input#first_name.form-control(type="text", name="first_name", required="", placeholder="Nama Depan")

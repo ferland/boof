@@ -46,7 +46,9 @@ app.use(function(req, res, next){
 
 app.route('/')
 .get(routes.index)
-.post(list.subscribe);
+.post(list.subscribe)
+app.route('/users/sendmail')
+.post(users.sendmail);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

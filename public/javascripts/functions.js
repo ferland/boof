@@ -177,7 +177,7 @@ jQuery(document).ready(function($) {
 
         $.ajax({
             type: "POST",
-            url: "php/contact.php",
+            url: "sendmail",
             data: data_string,
 
             //success
