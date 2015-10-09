@@ -1,55 +1,214 @@
 extends layout
 
 block content
-  //- div.child.col-md-offset-4
-  div.row
-    div.col-sm-12
-    div.child
-    div.logo
-      img(src="images/logo.png", alt="")
-  div.row
-    div.col-sm-12
-      h1.big ComingSoon
-  div.row
-    div.col-sm-12
-      p.middle-p Helping you fulfil Indonesian children's potential.
-      form.register(action='/' method='post' class='form-inline')
-        div.form-group
-          input(type="email", name="email" placeholder="Please Enter Your Email")
-          input(type="submit", value="Bagi")
-  //- div.middle
-  //-   div.middle-text
-  //-     p to help you fulfiling Indonesian children’s potential.
-  //-     form.register(action='/' method='post' class='form-inline')
-  //-       input(type="email", name="email" placeholder="Please Enter Your Email")
-  //-       input(type="submit", value="Bagi")
-
+    #preloader
+      #loader
+        .dot
+        .dot
+        .dot
+        .dot
+        .dot
+        .dot
+        .dot
+        .dot
+        .lading
+    // /#preloader
+    // Preloader End
+    // Main Menu
+    #main-menu.navbar.navbar-default.navbar-fixed-top(role="navigation")
+      .navbar-header
+        // responsive navigation
+        button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+          span.sr-only Toggle navigation
+          i.fa.fa-bars
+        // /.navbar-toggle
+      // /.navbar-header
+      nav.collapse.navbar-collapse
+        // Main navigation
+        ul#headernavigation.nav.navbar-nav
+          li.active
+            a(href="#page-top") Home
+          li
+            a(href="#about") Tentang Kami
+          li
+            a(href="#subscribe") Daftar
+          li
+            a(href="#contact") Hubungi Kami
+        // /.nav .navbar-nav
+      // /.navbar-collapse
+    // /#main-menu
+    // Main Menu End
+    // Page Top Section
+    section#page-top.section-style(data-background-image="images/background/page-top.jpg")
+      .pattern.height-resize
+        .container
+          .logo
+            img(src="images/logo-ayobagi.png", alt="AyoBagi.org")
+          h2.section-title
+            | Segera Hadir
+          // /.Section-title
+          #time_countdown.time-count-container
+            .col-sm-3.col-xs-3
+              .time-box
+                .time-box-inner.dash.days_dash.animated(data-animation="rollIn", data-animation-delay="300")
+                  span.time-number
+                    span.digit 0
+                    span.digit 0
+                    span.digit 0
+                  span.time-name Hari
+            .col-sm-3.col-xs-3
+              .time-box
+                .time-box-inner.dash.hours_dash.animated(data-animation="rollIn", data-animation-delay="600")
+                  span.time-number
+                    span.digit 0
+                    span.digit 0
+                  span.time-name Jam
+            .col-sm-3.col-xs-3
+              .time-box
+                .time-box-inner.dash.minutes_dash.animated(data-animation="rollIn", data-animation-delay="900")
+                  span.time-number
+                    span.digit 0
+                    span.digit 0
+                  span.time-name Menit
+            .col-sm-3.col-xs-3
+              .time-box
+                .time-box-inner.dash.seconds_dash.animated(data-animation="rollIn", data-animation-delay="1200")
+                  span.time-number
+                    span.digit 0
+                    span.digit 0
+                  span.time-name Detik
+          // /.time-count-container
+          .next-section
+            a.go-to-about
+              span
+          // /.next-section
+        // /.container
+      // /.pattern
+    // /#page-top
+    // Page Top Section  End
+    // About Us Section
+    section#about.section-style(data-background-image="images/background/about-us.jpg")
+      .pattern.height-resize
+        .container
+          h3.section-name
+            span
+              | Tentang Kami
+          // /.section-name
+          h2.section-title
+            | Membangun Generasi Emas
+          // /.Section-title
+          p.section-description
+            | Generasi muda adalah investasi terbaik sebuah bangsa.
+          // /.section-description
+          .team-container
+            .row
+              .col-sm-3
+                .usp
+                  i.fa.fa-plus-square
+                  h4 Kesehatan
+              // /.col-sm-3
+              .col-sm-3
+                .usp
+                  i.fa.fa-forward
+                  h4 Terdepan
+              // /.col-sm-3
+              .col-sm-3
+                .usp
+                  i.fa.fa-graduation-cap
+                  h4 Pendidikan
+              .col-sm-3
+                .usp
+                  i.fa.fa-home
+                  h4 Kemakmuran
+          .next-section
+            a.go-to-subscribe
+              span
+    section#subscribe.section-style(data-background-image="images/background/newsletter.jpg")
+      .pattern.height-resize
+        .container
+          h3.section-name
+            span
+              | Bergabunglah
+          // /.section-name
+          h2.section-title
+            | Update Terkini
+          // /.Section-title
+          p.section-description
+            | Jadilah barisan terdepan dalam membangun Indonesia.
+          // /.section-description
+          form.news-letter(method="post")
+            p.alert-success
+            p.alert-warning
+            .subscribe-hide
+              input#subscribe-email.form-control(type="email", name="subscribe-email", placeholder="Masukkan alamat email", required="")
+              button#subscribe-submit.btn(type="submit")
+                i.fa.fa-envelope
+              span#subscribe-loading.btn
+                i.fa.fa-refresh.fa-spin
+              .subscribe-error
+            // /.subscribe-hide
+            .subscribe-message
+          // /.news-letter
+          .next-section
+            a.go-to-contact
+              span
+          // /.next-section
+        // /.container
+      // /.pattern
+    // /#subscribe
+    // Subscribe Section End
+    // Contact Section
+    section#contact.section-style(data-background-image="images/background/contact.jpg")
+      .pattern.height-resize
+        .container
+          h3.section-name
+            span
+              | Hubungi Kami
+          // /.section-name
+          h2.section-title
+            | Lebih Dekat Dengan AyoBagi.org
+          // /.Section-title
+          p.section-description
+            | Kami siap membantu Anda untuk komentar dan pertanyaan tentang kami.
+          // /.section-description
+          form#contact-form.clearfix(action="email.php", method="post")
+            .contact-box-hide
+              .col-sm-6
+                input#first_name.form-control(type="text", name="first_name", required="", placeholder="Nama Depan")
+                span.first-name-error
+              .col-sm-6
+                input#last_name.form-control(type="text", name="last_name", required="", placeholder="Nama Belakang")
+                span.last-name-error
+              .col-sm-6
+                input#contact_email.form-control(type="email", name="contact_email", required="", placeholder="Alamat Email")
+                span.contact-email-error
+              .col-sm-6
+                input#subject.form-control(type="text", name="contact_subject", required="", placeholder="Subject")
+                span.contact-subject-error
+              .col-sm-10
+                textarea#message.form-control(rows="5", name="message", required="", placeholder="Pesan")
+                span.contact-message-error
+              .col-sm-2
+                button#contact-submit.btn.custom-btn.col-xs-12(type="submit", name="submit")
+                  a(href="")
+                  i.fa.fa-rocket
+                span#contact-loading.btn.custom-btn.col-xs-12
+                  i.fa.fa-refresh.fa-spin
+            // /.contact-box-hide
+            .contact-message
+          // /#contact-form
+          .next-section
+            a.go-to-page-top
+              span
 block footer
-  div.row.footer
-      div.col-sm-12
-        div.row
-          div.col-sm-12
-            ul.slogan
-              li.icon.big.plus
-                a.link Sehat
-              li.icon.big.cerdas
-                a.link Cerdas
-        div.row
-          div.col-sm-12
-            ul.slogan
-              li.icon.big.maju
-                a.link Maju
-              li.icon.big.sejahtera
-                a.link Sejahtera
-      div.col-md-12
-          ul.social
-            li
-              a.icon.twitter(href="https://twitter.com/ayobagi_org")
-            li
-              a.icon.fb(href="https://www.facebook.com/ayobagi.org")
-            li
-              a.icon.gplus(href="https://plus.google.com/113812145384919348739")
-            li
-              a.icon.youtube(href="#")
-            li
-              a.icon.instagram(href="https://instagram.com/ayobagi_org")
+  footer#footer-section
+    p.copyright &#169; AyoBagi.org 2015. All Rights Reserved.
+  script(type="text/javascript", src="javascripts/jquery-2.1.0.min.js")
+  // Modernizr js
+  script(type="text/javascript", src="javascripts/modernizr-2.8.0.min.js")
+  // Plugins
+  script(type="text/javascript", src="javascripts/plugins.js")
+  // Custom JavaScript Functions
+  script(type="text/javascript", src="javascripts/functions.js")
+  // Custom JavaScript Functions
+  script(type="text/javascript", src="javascripts/jquery.ajaxchimp.min.js")
