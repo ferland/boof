@@ -1197,4 +1197,5 @@ p.alert-success{
   padding: 10px;
   text-align: center;
   border-radius: 5px;
+  display: none;
 }
