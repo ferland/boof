@@ -106,7 +106,7 @@ jQuery(document).ready(function($) {
     -------------------------------------------------------------------*/
     $(".news-letter").ajaxChimp({
         callback: mailchimpResponse,
-        url: "http://jeweltheme.us10.list-manage.com/subscribe/post?u=a3e1b6603a9caac983abe3892&amp;id=257cf1a459" // Replace your mailchimp post url inside double quote "".  
+        url: "http://ayobagi.us11.list-manage.com/subscribe/post?u=9a8dfc53bb5967ab884fed1f0&amp;id=99b4bc97f3" // Replace your mailchimp post url inside double quote "".  
     });
 
     function mailchimpResponse(resp) {
