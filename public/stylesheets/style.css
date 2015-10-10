@@ -1193,3 +1193,8 @@ background: #00aaff;
 .col-md-12.content{
   padding: 0;
 }
+p.alert-success{
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}

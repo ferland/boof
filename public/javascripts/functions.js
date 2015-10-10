@@ -112,7 +112,7 @@ jQuery(document).ready(function($) {
     function mailchimpResponse(resp) {
          if(resp.result === 'success') {
          
-            $('.alert-success').html(resp.msg).fadeIn().delay(3000).fadeOut();
+            $('.alert-success').html('Pendaftaran Anda hampir selesai, Anda harus melakukan konfirmasi dengan cara mengklik link yang kami kirimkan ke alamat email anda.').fadeIn().delay(3000).fadeOut();
             
         } else if(resp.result === 'error') {
             $('.alert-warning').html(resp.msg).fadeIn().delay(3000).fadeOut();
