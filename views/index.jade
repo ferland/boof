@@ -43,7 +43,7 @@ block content
       .pattern.height-resize
         .container
           .logo
-            img(src="images/logo-ayobagi.png", alt="AyoBagi.org")
+            img(src="images/logo-re.png", alt="AyoBagi.org")
           h2.section-title
             | Segera Hadir
           // /.Section-title
@@ -213,3 +213,40 @@ block footer
   script(type="text/javascript", src="javascripts/functions.js")
   // Custom JavaScript Functions
   script(type="text/javascript", src="javascripts/jquery.ajaxchimp.min.js")
+  script.
+    var server_end = new Date('2016-02-29 00:00:00').getTime();
+    var client_now = new Date().getTime();
+    var end = server_end - client_now; // this is the real end time
+
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour *24
+    var timer;
+    function showRemaining()
+    {
+    distance= end;
+      if (distance < 0 ) {
+         clearInterval( timer );
+         document.getElementById('countdown').innerHTML = 'EXPIRED!';
+
+         return;
+      }
+      var days = Math.floor(distance / _day);
+      var hours = Math.floor( (distance % _day ) / _hour );
+      var minutes = Math.floor( (distance % _hour) / _minute );
+      var seconds = Math.floor( (distance % _minute) / _second );
+      
+      $('#time_countdown').countDown({
+        targetOffset: {
+            'day':      days,
+            'month':    0,
+            'year':     0,
+            'hour':     hours,
+            'min':      minutes,
+            'sec':      seconds
+        },
+        omitWeeks: true
+      });
+    }
+    showRemaining();
